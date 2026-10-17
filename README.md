@@ -57,8 +57,9 @@ fapo-ran                                  ← RAN only (separate)
 
 - [docs/ARCHITECTURE_BOUNDARIES.md](docs/ARCHITECTURE_BOUNDARIES.md) — hard boundaries
 - [docs/SOURCES_REGISTRY.md](docs/SOURCES_REGISTRY.md) — design source index
+- [docs/PNPM_DEPLOYMENT.md](docs/PNPM_DEPLOYMENT.md) — pnpm setup and deployment commands
 - [CONSOLIDATION.md](CONSOLIDATION.md) — legacy merge notes (historical)
 
-## Dependency Management
+## Development and deployment
 
-This repository currently has no Node.js package manifests, so it intentionally has no pnpm workspace or lockfile. Use Cargo for Rust dependencies and the existing Python project metadata for Python dependencies. Do not copy a pnpm lockfile from Ava007 or Agent-X into this repository. If a Node.js package is added here later, pin `pnpm@12.10.0`, define its workspace at the repository root, and commit the generated `pnpm-lock.yaml` after a successful local install.
+The repository root pins pnpm 12.10.0 as the task and deployment entry point. Rust dependencies remain managed by Cargo; Python dependencies remain managed by pip/setuptools. Start with `corepack enable && corepack prepare pnpm@12.10.0 --activate`, then run `pnpm install` and commit the generated root lockfile. Build/run the Rust service with `pnpm run build` / `pnpm run dev`; install Python support only when needed with `pnpm run setup:python`. The lockfile and local install have not yet been generated in this environment.
