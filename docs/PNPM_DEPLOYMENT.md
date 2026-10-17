@@ -36,3 +36,6 @@ The Python extras include large ML dependencies. Install them only on hosts that
 ## Deployment boundary
 
 This repository provides the GSAP orchestration substrate and capability contracts. Deploy the compiled Rust service on the selected host, then connect Omni-OS and Agent-X using their own deployment configuration. pnpm coordinates repository commands; it does not deploy those external systems or replace their runtime-specific tools.
+
+
+Shared package-manager guidance: [pnpm Skill](../.agents/skills/pnpm/SKILL.md) (includes the release blog and upstream migration/performance references).
