@@ -58,3 +58,7 @@ fapo-ran                                  ← RAN only (separate)
 - [docs/ARCHITECTURE_BOUNDARIES.md](docs/ARCHITECTURE_BOUNDARIES.md) — hard boundaries
 - [docs/SOURCES_REGISTRY.md](docs/SOURCES_REGISTRY.md) — design source index
 - [CONSOLIDATION.md](CONSOLIDATION.md) — legacy merge notes (historical)
+
+## Dependency Management
+
+This repository currently has no Node.js package manifests, so it intentionally has no pnpm workspace or lockfile. Use Cargo for Rust dependencies and the existing Python project metadata for Python dependencies. Do not copy a pnpm lockfile from Ava007 or Agent-X into this repository. If a Node.js package is added here later, pin `pnpm@12.10.0`, define its workspace at the repository root, and commit the generated `pnpm-lock.yaml` after a successful local install.
