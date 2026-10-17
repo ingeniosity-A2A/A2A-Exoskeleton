@@ -28,4 +28,4 @@ Use `pnpm install --frozen-lockfile --prefer-offline` when the local shared stor
 
 Each PR is ready to leave draft only after its applicable checklist is complete and recorded: pinned pnpm/Node versions, committed lockfile, approved build scripts, frozen install, successful app builds, and the actual deployment path. Do not label a repository certified based on documentation or lock generation alone.
 
-The [shared pnpm Skill](.agents/skills/pnpm/SKILL.md) is the source map for current upstream guidance and release updates. Shared UI/skill code across separate repositories still needs an explicit versioned package/config dependency; a shared pnpm version does not itself share code.
+The [shared pnpm Skill](../.agents/skills/pnpm/SKILL.md) is the source map for current upstream guidance and release updates. Shared UI/skill code across separate repositories still needs an explicit versioned package/config dependency; a shared pnpm version does not itself share code.
