@@ -59,6 +59,7 @@ fapo-ran                                  ← RAN only (separate)
 - [docs/SOURCES_REGISTRY.md](docs/SOURCES_REGISTRY.md) — design source index
 - [pnpm Skill](.agents/skills/pnpm/SKILL.md) — shared pnpm retrieval and verification contract
 - [docs/PNPM_DEPLOYMENT.md](docs/PNPM_DEPLOYMENT.md) — pnpm setup and deployment commands
+- [docs/PNPM_ROLLOUT_STATUS.md](docs/PNPM_ROLLOUT_STATUS.md) — detailed cross-repository remaining work and certification checklist
 - [CONSOLIDATION.md](CONSOLIDATION.md) — legacy merge notes (historical)
 
 ## Development and deployment
