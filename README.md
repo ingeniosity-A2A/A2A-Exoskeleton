@@ -57,4 +57,14 @@ fapo-ran                                  ← RAN only (separate)
 
 - [docs/ARCHITECTURE_BOUNDARIES.md](docs/ARCHITECTURE_BOUNDARIES.md) — hard boundaries
 - [docs/SOURCES_REGISTRY.md](docs/SOURCES_REGISTRY.md) — design source index
+- [pnpm Skill](.agents/skills/pnpm/SKILL.md) — shared pnpm retrieval and verification contract
+- [docs/PNPM_DEPLOYMENT.md](docs/PNPM_DEPLOYMENT.md) — pnpm setup and deployment commands
+- [docs/PNPM_ROLLOUT_STATUS.md](docs/PNPM_ROLLOUT_STATUS.md) — detailed cross-repository remaining work and certification checklist
 - [CONSOLIDATION.md](CONSOLIDATION.md) — legacy merge notes (historical)
+
+## Development and deployment
+
+The repository root pins pnpm 12.10.0 as the task and deployment entry point. Rust dependencies remain managed by Cargo; Python dependencies remain managed by pip/setuptools. Start with `corepack enable && corepack prepare pnpm@12.10.0 --activate`, then run `pnpm install` and commit the generated root lockfile. Build/run the Rust service with `pnpm run build` / `pnpm run dev`; install Python support only when needed with `pnpm run setup:python`. The lockfile and local install have not yet been generated in this environment.
+
+
+Shared package-manager guidance: [pnpm Skill](.agents/skills/pnpm/SKILL.md) (includes the release blog and upstream migration/performance references).
