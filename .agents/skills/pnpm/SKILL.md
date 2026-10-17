@@ -29,6 +29,13 @@ Check the release blog when a task depends on new behavior, security fixes, migr
 - Keep service/runtime boundaries intact. pnpm installs JS packages and can run scripts; Cargo, Python, Docker, and deployment platforms retain their own dependency/runtime responsibilities.
 - Never claim migration certification without a generated and reviewed lockfile, a frozen install, approved dependency build scripts, and the relevant build/deploy checks.
 
+## Sharing across repositories
+
+- Use `configDependencies` for shared pnpm configuration (catalogs, patches, hooks, and settings) only when a reviewed, version-pinned configuration package exists.
+- Share executable skills through a versioned skill package or a full-commit-pinned Git source; do not duplicate changing skill manuals into every repo.
+- Share UI/code through a versioned package or a pinned Git dependency. A pnpm workspace and catalog do not cross repository boundaries.
+- Keep each deployable service's lockfile in its own repository until a deliberate monorepo move is approved.
+
 ## Retrieval and verification cycle
 
 1. Identify the pnpm operation, repository, and pinned pnpm version.
