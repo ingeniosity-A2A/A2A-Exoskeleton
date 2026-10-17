@@ -1,0 +1,14 @@
+{
+  "name": "a2a-exoskeleton-tooling",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "pnpm@12.10.0",
+  "engines": { "node": ">=22.13.0" },
+  "scripts": {
+    "build": "cargo build --manifest-path rust/Cargo.toml --release",
+    "dev": "cargo run --manifest-path rust/Cargo.toml",
+    "check:rust": "cargo check --manifest-path rust/Cargo.toml",
+    "setup:python": "python3 -m pip install -e .",
+    "check:python": "python3 -m compileall -q exoskeleton"
+  }
+}
