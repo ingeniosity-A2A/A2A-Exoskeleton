@@ -30,3 +30,7 @@ sample_architecture_spec.pdf
 # Distribution
 *.whl
 *.tar.gz
+
+# pnpm repository-local store
+.pnpm-store/
+node_modules/
