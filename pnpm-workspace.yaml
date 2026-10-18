@@ -1,0 +1,3 @@
+# Exoskeleton owns the shared orchestration/tooling workspace.
+# Add repository-local JS/TS packages here only when they are actual Exoskeleton packages.
+packages: []
