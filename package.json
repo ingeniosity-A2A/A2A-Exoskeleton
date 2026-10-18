@@ -1,0 +1,10 @@
+{
+  "name": "a2a-exoskeleton-tooling",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "pnpm@12.14.0",
+  "engines": {
+    "node": ">=22.13.0",
+    "pnpm": ">=12.14.0"
+  }
+}
