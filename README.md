@@ -57,4 +57,5 @@ fapo-ran                                  ← RAN only (separate)
 
 - [docs/ARCHITECTURE_BOUNDARIES.md](docs/ARCHITECTURE_BOUNDARIES.md) — hard boundaries
 - [docs/SOURCES_REGISTRY.md](docs/SOURCES_REGISTRY.md) — design source index
+- [docs/DEPENDENCY_INTELLIGENCE.md](docs/DEPENDENCY_INTELLIGENCE.md) — framework dependency freshness, provenance, validation, and rollback policy
 - [CONSOLIDATION.md](CONSOLIDATION.md) — legacy merge notes (historical)
