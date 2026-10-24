@@ -1,61 +1,30 @@
-# a2a-exoskeleton
+# A2A-Exoskeleton — Retirement / Migration Notice
 
-**O(1) Context Orchestration Substrate** — GSAP kernel, capability contracts, execution lifecycle.
+**This repository is retiring as an active implementation location. Do not add new runtime code here.** The architecture and implementation work is being reassigned by ownership boundary; this repository remains available as historical provenance until the migration is reviewed and the replacement is verified.
 
-Not intellect. Not the operating/capability environment. Not primary memory authority.
+## Canonical destination map
 
-## Official hierarchy
+| Responsibility / asset | Destination | Migration rule |
+|---|---|---|
+| Air-LLM / Air-Ava007 Rust substrate; canonical timeline; Rust-native verification contracts; RF/device execution | [MA-Edge-Computing/air-ava007](https://github.com/ingeniosity-A2A/MA-Edge-Computing/tree/main/air-ava007) | Air-Ava007 is the canonical name. Keep Rust workspace, TurboVec/TurboQuant adapters, ledger, and Rev.ike gate in this edge-owned workspace. |
+| Ava-007 reasoning, learning, candidate generation, intelligence policies | [Cybernetic-Ava007](https://github.com/ingeniosity-A2A/Cybernetic-Ava007) | Move intellect logic only; do not move device drivers or the RF plane into the intellect repository. |
+| Device, browser, network, compute and operating environment integration | [Ava007-Omni-OS](https://github.com/ingeniosity-A2A/Ava007-Omni-OS) | Keep environment adapters and integration surfaces here. |
+| GSAP scheduling semantics, dependency ordering, synchronization, cancellation, lifecycle and canonical timeline contract | [MA-Edge-Computing/air-ava007](https://github.com/ingeniosity-A2A/MA-Edge-Computing/tree/main/air-ava007) | Preserve orchestration as a control-flow/lifecycle contract; do not reduce GSAP to animation/interpolation. |
 
-```text
-CYBERNETIC-AVA007                         ← INTELLECT
-  reason · infer · learn · decide · adapt
-        │ Intent
-        ▼
-a2a-exoskeleton          ← THIS REPO      ← EXOSKELETON / ORGANISM
-  GSAP Kernel · capability contracts
-  discover → select → allocate → execute
-  → observe → interrupt → reverse → release
-        │ capability.request
-        ▼
-Ava007-Omni-OS                            ← OMNI-OS (environments)
-  edge · network · devices · browser
-  compute (CUDA/GPU workers) · containers
-        │
-   ┌────┼────┬──────────┐
-   ▼    ▼    ▼          ▼
-  S26  RevPi Oracle   Agent-X
-Termux Linux  GPU     skill execution
+## Canonical position statement
 
-Forged-Filing-Sys                         ← filing / memory surface (separate)
-fapo-ran                                  ← RAN only (separate)
-```
+> TurboVec proposes, TurboQuant compresses, Rev.ike verifies, GSAP schedules — logically in the application, physically in the RF domain — and the canonical timeline arbitrates in both, with quantization distortion reported to the gate that decides whether the turn is failed.
 
-## What this repo owns
+Rust is the deterministic substrate. Quantum-inspired methods remain optional and must be evaluated against classical baselines; they are not the system's core and no superiority claim is accepted without reproducible evidence.
 
-| Owns | Does **not** own |
-|------|------------------|
-| GSAP Kernel orchestration | Primary intellect (Cybernetic-Ava007) |
-| Capability *contracts* and lifecycle | CUDA / PyTorch / TensorRT *workers* (Omni-OS) |
-| State composition · routing | Android / Termux / SDR *hardware planes* (Omni-OS) |
-| Substrate for void / curation workstation | Agent Browser *engine* (Omni-OS) |
-| Super-refactor observe/measure/propose | Full memory authority (Forged) |
-| | RAN (fapo-ran) |
+The preserved statement and conclusion are recorded in [Air-Ava007 WHITEPAPER.md](https://github.com/ingeniosity-A2A/MA-Edge-Computing/blob/main/air-ava007/WHITEPAPER.md).
 
-**Rule:** Exoskeleton asks Omni-OS for capabilities. It does not embed Linux, GPU, modem, or browser stacks.
+## Retirement safety rules
 
-## Related repos
+1. Do not delete historical source files until each source path is inventoried and its destination copy is verified.
+2. Preserve commit history/provenance where practical; cross-repository copy is not a Git rename and does not automatically preserve history.
+3. Mark benchmark claims as reported until trace artifacts, dataset versions, commands, commit SHA, device/runtime metadata and reproducible results exist.
+4. C2 device sweep and C3 real-corpus recall remain the priority evidence gates. Neither is considered passed merely because a runner or interface exists.
+5. No GitHub Actions workflow is introduced by this retirement change.
 
-| Repo | Role |
-|------|------|
-| [Cybernetic-Ava007](https://github.com/ingeniosity-A2A/Cybernetic-Ava007) | Intellect |
-| [Ava007-Omni-OS](https://github.com/ingeniosity-A2A/Ava007-Omni-OS) | Environments / devices / compute / browser |
-| [Forged-Filing-Sys](https://github.com/ingeniosity-A2A/Forged-Filing-Sys) | Filing surface |
-| [Agent-X](https://github.com/ingeniosity-A2A/Agent-X) | Edge skill execution |
-| [fapo-ran](https://github.com/ingeniosity-A2A/fapo-ran) | RAN |
-
-## Docs
-
-- [docs/ARCHITECTURE_BOUNDARIES.md](docs/ARCHITECTURE_BOUNDARIES.md) — hard boundaries
-- [docs/SOURCES_REGISTRY.md](docs/SOURCES_REGISTRY.md) — design source index
-- [docs/DEPENDENCY_INTELLIGENCE.md](docs/DEPENDENCY_INTELLIGENCE.md) — framework dependency freshness, provenance, validation, and rollback policy
-- [CONSOLIDATION.md](CONSOLIDATION.md) — legacy merge notes (historical)
+This notice retires the repository as an active owner; it does not falsely claim that every legacy file has already been transferred. The old root does not currently expose an `air-llm/` directory at the checked path, so that named tree must be located in its actual source branch/repository before destructive deletion can be safe.
